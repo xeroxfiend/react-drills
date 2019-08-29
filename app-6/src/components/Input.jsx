@@ -11,17 +11,14 @@ class Input extends Component {
 
     handleChange(e) {
         this.setState({userInput: e})
+        // console.log(e)
     }
 
-    handleClick() {
-
-    }
 
     render() {
         return (
             <div className="list">
-                <input onChange={e => handleChange(e.target.value)} type="text"/>
-                <button onClick={this.handleClick()}>Add</button>
+                <input onChange={e => this.handleChange(e.target.value)} type="text"/>                
                 <List
                 listItem={this.state.userInput} />
             </div>
